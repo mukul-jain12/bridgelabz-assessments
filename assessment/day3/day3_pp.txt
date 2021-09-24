@@ -1,0 +1,21 @@
+#2 Move files from one folder to respective folder
+Ans. for file in `ls *.txt`; do fname=`echo $file | awk -F. '{print $1}'`; mkdir $fname; mv $file $fname; done
+
+#3 Append current date to all log files name which has extension .log.1 from a folder
+Ans. for file in `ls *.log.1`; do file2=`echo $file | awk -F.log '{print $1 "-"}'`; today=`date +"%d%m%y"`; filename=`echo $file2$today".log"`; mv $file $filename; done
+
+#5 Check if a folder exist or not, if not create
+Ans.	if [ -d "/PATH" ]; then
+    		echo "folder already exist"
+	else
+    		mkdir assess
+	fi
+
+#6 Data analysis/manipulation(AWK)
+Ans(i) cat Day3\ Probs01\ data.csv | awk -v x=500000 '$7>=x'| awk '{print $2 $7}'
+  (ii) cat Day3\ Probs01\ data.csv | grep CAPTAIN | awk '{sum+=$7} END {print sum}'
+ (iii) cat Day3\ Probs01\ data.csv | awk '$5>=7000 && $5<=10000'| awk '{print $3 " " $5}'
+  (iv) cat Day3\ Probs01\ data.csv | awk '{sum+=$4} END {print sum/(NR-1)}'
+
+#7 Create a process list table
+Ans. ps -eo pid,ppid,cmd,%mem,%cpu

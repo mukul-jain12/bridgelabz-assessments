@@ -1,0 +1,158 @@
+# Sequences PP
+
+1. Use random function to get single digit.
+Ans. echo $((RANDOM%10))
+
+2. Use random function to get dice number between 1-6.
+Ans. echo $((RANDOM%6))
+
+3. Add two random dice number and print result.\\
+Ans. one_dice=`echo $((RANDOM%6))`; sec_dice=`echo $((RANDOM%6))`; echo $one_dice; echo $sec_dice; echo $((one_dice+sec_dice))
+
+4. Write a program that read 5 random 2 digit value, then find their sum and avarage.
+Ans.	echo "Enter number:"
+	read a
+	sum=0
+	echo "$a Random generated numbers"
+	for (( i=a; i >= 1; i-- ));
+	do
+		b=`echo $((RANDOM%10))`
+		echo $b
+		sum=$((sum+b))
+	done
+	echo "Sum = "$sum "and Avarage = "$((sum/a))
+
+
+# Selection PP with if, elif and else
+
+1. Read a single digit number and write in word
+Ans.    read num
+
+	if [ $num == 1 ];
+	then
+		echo "One";
+	elif [ $num == 2 ];
+	then
+		echo "Two";
+	elif [ $num == 3 ];
+	then
+		echo "Three";
+	fi
+
+2. Read a number and display the week day
+Ans.    read num
+
+	if [ $num == 1 ];
+	then
+		echo "Sunday";
+	elif [ $num == 2 ];
+	then
+		echo "Monday";
+	elif [ $num == 3 ];
+	then
+		echo "Tuesday";
+	elif [ $num == 4 ];
+	then
+		echo "Wednesday";
+	elif [ $num == 5 ];
+	then
+		echo "Thursday";
+	elif [ $num == 6 ];
+	then
+		echo "Friday";
+	elif [ $num == 7 ];
+	then
+		echo "Saturday";
+	fi
+
+3. Read a number 1,10,100,1000 etc and display unit, ten, hundred
+Ans.    read num
+
+	if [ $num == 1 ];
+	then
+		echo "Unit";
+	elif [ $num == 2 ];
+	then
+		echo "Ten";
+	elif [ $num == 3 ];
+	then
+		echo "Hundred";
+	elif [ $num == 4 ];
+	then
+		echo "Thousand";
+	elif [ $num == 5 ];
+	then
+		echo "Ten Thousand";
+	fi
+
+4. Enter 3 number do following expression and find maximum and minimum
+Ans.	read a
+	read b
+	read c
+
+	exp1=$((a+b*c));
+	exp2=$((a%b+c));
+	exp3=$((c+a/b));
+	exp4=$((a*b+c));
+
+	echo $exp1 $exp2 $exp3 $exp4
+	
+	#for maximum value
+	if [ $exp1 -gt $exp2 ] && [ $exp1 -gt $exp3 ] && [ $exp1 -gt $exp4 ];
+	then
+		echo "Exp1 is max"
+	elif [ $exp2 -gt $exp1 ] && [ $exp2 -gt $exp3 ] && [ $exp2 -gt $exp4 ];
+	then
+		echo "Exp2 is max"
+	elif [ $exp3 -gt $exp1 ] && [ $exp3 -gt $exp2 ] && [ $exp3 -gt $exp4 ];
+	then
+		echo "Exp3 is max";
+	else
+		echo "Exp4 is max";
+	fi
+
+	# for minimum value
+	if [ $exp1 -lt $exp2 ] && [ $exp1 -lt $exp3 ] && [ $exp1 -lt $exp4 ];
+	then
+		echo "Exp1 is min"
+	elif [ $exp2 -lt $exp1 ] && [ $exp2 -lt $exp3 ] && [ $exp2 -lt $exp4 ];
+	then
+		echo "Exp2 is min"
+	elif [ $exp3 -lt $exp1 ] && [ $exp3 -lt $exp2 ] && [ $exp3 -lt $exp4 ];
+	then
+		echo "Exp3 is min";
+	else
+		echo "Exp4 is min";
+	fi
+
+# Selection PP with case statement
+
+1. Read a single digit number and write in word using case
+Ans.    echo "Enter Single Digit Number:"
+	read num
+	
+	case "$num" in
+		1)	echo "One";;
+		2)	echo "Two";;
+		3)	echo "Three";;
+		4)	echo "Four";;
+		5)	echo "Five";;
+		6)	echo "Six";;
+		7)	echo "Seven";;
+		8)	echo "Eight";;
+		9)	echo "Nine";;
+	esac
+
+2. Read a number and display the week day using case
+Ans.    echo "Enter Single Digit Number (1-7):"
+	read num
+	
+	case "$num" in
+		1)	echo "Sunday";;
+		2)	echo "Monday";;
+		3)	echo "Tuesday";;
+		4)	echo "Wednesday";;
+		5)	echo "Thursday";;
+		6)	echo "Friday";;
+		7)	echo "Saturday";;
+	esac
