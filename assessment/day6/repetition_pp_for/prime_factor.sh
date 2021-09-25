@@ -1,3 +1,6 @@
+#!/bin/bash
+
+#Write a program to compute Factors of a number N using prime factorization method.
 
 echo "Enter an integer:"
 read input

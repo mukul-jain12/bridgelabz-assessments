@@ -13,6 +13,7 @@ Ans.	if [ -d "/PATH" ]; then
 
 #6 Data analysis/manipulation(AWK)
 Ans(i) cat Day3\ Probs01\ data.csv | awk -v x=500000 '$7>=x'| awk '{print $2 $7}'
+
   (ii) cat Day3\ Probs01\ data.csv | grep CAPTAIN | awk '{sum+=$7} END {print sum}'
  (iii) cat Day3\ Probs01\ data.csv | awk '$5>=7000 && $5<=10000'| awk '{print $3 " " $5}'
   (iv) cat Day3\ Probs01\ data.csv | awk '{sum+=$4} END {print sum/(NR-1)}'

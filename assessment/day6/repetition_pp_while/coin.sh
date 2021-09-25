@@ -1,5 +1,7 @@
 #!/bin/bash +x
 
+#Extend the Flip Coin problem till either Heads or Tails wins 11 times.
+
 head=1
 tail=1
 
@@ -27,3 +29,10 @@ do
 			fi;;
 	esac
 done
+
+if [ $head -gt $tail ]
+then
+	echo "HEADS Won"
+else
+	echo "TAILS Won"
+fi

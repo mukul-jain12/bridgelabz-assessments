@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#Write a Program to show Sum of three Integer adds to ZERO
+
 array=(1 2 -3 -11 5 6)
 for (( i=0; i<`expr ${#array[@]}-2`; i++ ))
 do

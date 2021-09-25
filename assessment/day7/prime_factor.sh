@@ -1,12 +1,15 @@
+#!/bin/bash
+
+# Extend the Prime Factorization Program to store all the Prime Factors of a number n into an array and finally display the output.
 
 echo "Enter an integer:"
 read input
+
 if [ $input -lt 1 ]
 then
 	echo "Not valid"
 	exit 1
 fi
-
 
 count=0
 flag=0

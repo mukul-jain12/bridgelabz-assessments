@@ -1,6 +1,6 @@
-# Write a function to check if the two numbers are Palindromes
-
 #!/bin/bash
+
+# Write a function to check if the two numbers are Palindromes
 
 function palindrome() {
 	rev=0

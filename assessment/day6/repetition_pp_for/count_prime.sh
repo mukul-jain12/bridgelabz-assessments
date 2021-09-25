@@ -1,6 +1,8 @@
+#!/bin/bash
+
 #Extend the program to take a range of number as input and output the Prime Numbers in that range.
 
-#!/bin/bash 
+echo "First no. should be smaller than second no."
 read a
 read b
 for (( i=$a; i<=$b; i++ ))

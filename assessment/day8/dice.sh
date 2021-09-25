@@ -49,5 +49,4 @@ done
 
 for i in ${dice[@]}
 do
-	echo "'"$i"'"
 done

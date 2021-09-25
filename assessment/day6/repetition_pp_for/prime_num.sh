@@ -1,6 +1,6 @@
-# Write a program that takes a input and determines if the number is a prime.
-
 #!/bin/bash
+
+# Write a program that takes a input and determines if the number is a prime.
 
 read number
 

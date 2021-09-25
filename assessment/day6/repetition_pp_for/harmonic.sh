@@ -1,3 +1,7 @@
+#!/bin/bash
+
+#Write a program that takes a command-line argument n and prints the nth harmonic number.
+
 echo "Enter number"
 read num
 

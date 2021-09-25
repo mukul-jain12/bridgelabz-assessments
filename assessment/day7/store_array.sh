@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Write a program in the following steps
+# a. Generates 10 Random 3 Digit number.
+# b. Store this random numbers into a array.
+# c. Then find the 2nd largest and the 2nd smallest element without sorting the array.
+
 array=()
 for (( i=0; i<10; i++ ))
 do
@@ -24,6 +31,3 @@ do
 	fi
 done
 echo "$sec_max is max and $sec_min is min"
-
-arrays=(`echo ${array[@]} | tr " " "\n" | sort -n`)
-echo ${arrays[@]}
